@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
 
 @Component({
@@ -8,11 +9,9 @@ import { LoaderService } from 'src/services/loader.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  LanguageID: any;
-  constructor(public loaderService: LoaderService, public router: Router) { }
-  ngOnInit(): void {
-    this.LanguageID = 1;//sessionStorage.getItem('LanguageID');
-  }
+
+  constructor(public loaderService: LoaderService, public apiService: ApiService, public router: Router) { }
+
   logout() {
     this.loaderService.showSpinner = true;
     sessionStorage.clear();

@@ -7,7 +7,10 @@ import axios from 'axios';
 export class ApiService {
 
   hostURL: string;
+
   controller: string = sessionStorage.getItem('controller') || "EBM";
+
+  languageID: string = sessionStorage.getItem('languageID') || "1";
 
   constructor() {
     this.hostURL = environment.host;

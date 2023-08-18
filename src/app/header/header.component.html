@@ -1,17 +1,12 @@
 <div class="row">
     <div class="col-lg-12 bg">
         <div>
-            <label>Welcome Back, <br><b style=" color: #1dc0d3;">{{loaderService.userName}} </b>
+            <label>{{apiService.languageID=='1'?"Welcome Back":"Bienvenue dos"}}, <br><b
+                    style=" color: #1dc0d3;">{{loaderService.userName}} </b>
                 <img src="assets/images/wave.png" style="width: 15px;">
             </label>
         </div>
-        <div style="display: flex;align-items: center;">
-            <select class="form-control lang" (change)="changeLanguageID($event)" [(ngModel)]="LanguageID"
-                name="LanguageID">
-                <option value="1">En</option>
-                <option value="6">Fr</option>
-            </select>
-            &nbsp; &nbsp; &nbsp;
+        <div style="display: flex;">
             <img src="assets/images/logout.png" style="width: 30px;cursor: pointer;margin-right: 1rem;" title="Logout"
                 (click)="logout()">
         </div>
