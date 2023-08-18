@@ -1,21 +1,23 @@
-<div class="container" style="height:100vh">
-    <div class="row">
-        <div class="col-lg-8">
+<div class="comtainer-fluid bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
 
-        </div>
-        <div class="col-lg-4 cardlay">
-            <div class="card" style="text-align: center;padding: 2rem;">
-                <div style="text-align: center;">
-                    <img src="assets/images/mainlogo.png" style="width: 5rem;">
+            </div>
+            <div class="col-lg-4 cardlay">
+                <div class="card" style="text-align: center;padding: 2rem;">
+                    <div style="text-align: center;">
+                        <img src="assets/images/mainlogo.png" style="width: 10rem;">
+                    </div>
+                    <br>
+                    <h4>Login</h4>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Username">
+                    <br>
+                    <input type="text" class="form-control" placeholder="Password">
+                    <br>
+                    <button type="button" class="loginbtn" (click)="login()">Login</button>
                 </div>
-                <br>
-                <h4>Login</h4>
-                <br>
-                <input type="text" class="form-control" placeholder="Username">
-                <br>
-                <input type="text" class="form-control" placeholder="Password">
-                <br>
-                <button type="button" (click)="login()">Login</button>
             </div>
         </div>
     </div>
