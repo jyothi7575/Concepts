@@ -5,12 +5,14 @@ import { EBMRoutingModule } from './ebm-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientsComponent } from './patients/patients.component';
+import { PatientRegistrationComponent } from './patient-registration/patient-registration.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    PatientsComponent
+    PatientsComponent,
+    PatientRegistrationComponent
   ],
   imports: [
     CommonModule,
