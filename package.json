@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "stage": "ng build --base-href --configuration stage",
+    "prod": "ng build --base-href --configuration production"
   },
   "private": true,
   "dependencies": {
