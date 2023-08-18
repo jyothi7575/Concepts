@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.menuicon {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5rem;
+}

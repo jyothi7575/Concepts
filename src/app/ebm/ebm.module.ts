@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { EBMRoutingModule } from './ebm-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PatientsComponent } from './patients/patients.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    PatientsComponent
   ],
   imports: [
     CommonModule,
