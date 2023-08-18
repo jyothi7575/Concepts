@@ -14,8 +14,8 @@
             <app-sidebar></app-sidebar>
         </div>
         <div class="col-lg-10">
-            <app-header></app-header>
-            <router-outlet></router-outlet>
+            <app-header (ChangeLanguage)="changeLanguage()"></app-header>
+            <router-outlet *ngIf="!reloadRouterOutlet"></router-outlet>
         </div>
     </div>
 </div>
