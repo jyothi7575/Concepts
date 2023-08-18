@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
+import { login } from '../../assets/jsons/login';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +10,12 @@ import { LoaderService } from 'src/services/loader.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, AfterViewInit {
+  labels: any;
 
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit() {
+    this.labels = this.apiService.languageID == '1' ? login.english : login.french;
   }
 
   ngAfterViewInit() {
@@ -27,7 +29,19 @@ export class LoginComponent implements OnInit, AfterViewInit {
     this.loaderService.isLogin = 'yes';
     sessionStorage.setItem("isLogin", "yes");
     this.router.navigate(['/EBM/Dashboard']);
+  }
 
+  languageChange(event: any) {
+    if (event.target.checked) {
+      this.apiService.languageID = '6';
+      sessionStorage.setItem("languageID","6");
+      this.labels = login.french;
+    }
+    else {
+      this.apiService.languageID = '1';
+      sessionStorage.setItem("languageID","1");
+      this.labels = login.english;
+    }
   }
 
 }
