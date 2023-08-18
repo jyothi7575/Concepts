@@ -5,8 +5,15 @@
                 <img src="assets/images/wave.png" style="width: 15px;">
             </label>
         </div>
-        <div style="display: flex;">
-            <img src="assets/images/logout.png" style="width: 30px;cursor: pointer;margin-right: 1rem;" title="Logout" (click)="logout()">
+        <div style="display: flex;align-items: center;">
+            <select class="form-control lang" (change)="changeLanguageID($event)" [(ngModel)]="LanguageID"
+                name="LanguageID">
+                <option value="1">En</option>
+                <option value="6">Fr</option>
+            </select>
+            &nbsp; &nbsp; &nbsp;
+            <img src="assets/images/logout.png" style="width: 30px;cursor: pointer;margin-right: 1rem;" title="Logout"
+                (click)="logout()">
         </div>
     </div>
 </div>
