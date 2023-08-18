@@ -6,7 +6,19 @@
                 <img src="assets/images/wave.png" style="width: 15px;">
             </label>
         </div>
-        <div style="display: flex;">
+        <div style="display: flex; align-items: center;">
+            <div class="switchlay">
+                <label>En</label>
+                <label class="switch">
+                    <input type="checkbox" (change)="languageChange($event)" [checked]="apiService.languageID=='6'">
+                    <span class="slider"></span>
+                </label>
+                <label>Fn</label>
+            </div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+           
             <img src="assets/images/logout.png" style="width: 30px;cursor: pointer;margin-right: 1rem;" title="Logout"
                 (click)="logout()">
         </div>
