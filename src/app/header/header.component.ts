@@ -12,6 +12,7 @@ export class HeaderComponent {
   constructor(public loaderService: LoaderService, public router: Router) { }
 
   logout() {
+    this.loaderService.showSpinner = true;
     sessionStorage.clear();
     this.loaderService.isLogin = 'no';
     sessionStorage.setItem("isLogin", "no");

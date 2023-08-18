@@ -16,11 +16,14 @@ export class LoginComponent implements OnInit, AfterViewInit {
     throw new Error('Method not implemented.');
   }
 
-  ngAfterViewInit(): void {
-    throw new Error('Method not implemented.');
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.loaderService.showSpinner = false;
+    }, 500);
   }
 
   login() {
+    this.loaderService.showSpinner = true;
     this.loaderService.isLogin = 'yes';
     sessionStorage.setItem("isLogin", "yes");
     this.router.navigate(['/EBM/Dashboard']);
