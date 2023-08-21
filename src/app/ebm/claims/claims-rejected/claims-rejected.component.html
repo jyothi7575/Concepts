@@ -3,10 +3,8 @@
         <div class="col-lg-11">
             <h5 class="headings">Claims Rejected</h5>
         </div>
-       
     </div>
 </div>
-<br>
 <div class="row">
     <div class="col-lg-12">
         <table class="table table-hover">
@@ -35,9 +33,9 @@
                 <td>{{details.claimAmount}}</td>
                 <td>{{details.status}}</td>
                 <td>{{details.reason}}</td>
-                <td> <a>
-                        <img src="assets/images/ViewDetails.png" (click)="showcet(details.attachments)" />
-                    </a>
+                <td>
+                    <img src="assets/images/ViewDetails.png" class="editdelete"
+                        (click)="showcet(details.attachments)" />
                 </td>
             </tr>
         </table>

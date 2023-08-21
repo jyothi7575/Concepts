@@ -9,15 +9,16 @@ export const patient = {
         "add": "Add",
         "firstName": "First Name",
         "lastName": "Last Name",
-        "dateOfBirth": "date Of Birth",
+        "dateOfBirth": "Date Of Birth",
         "identityNumber": "Identity Number",
-        "insuranceCompanyName": "Insurance CompanyName",
+        "insuranceCompanyName": "Insurance Company Name",
         "policyNumber": "Policy Number",
         "subscriptionNumber": "Subscription Number",
         "policyExpiryDate": "Policy Expiry Date",
         "save": "Save",
         "back": "Back",
-        "dashboard":"dashboard"
+        "dashboard": "Uploaded Patients",
+        "up": "Upload Patient"
     },
     "french": {
         "name": "Nom",
@@ -37,6 +38,7 @@ export const patient = {
         "policyExpiryDate": "Date d'expiration de la police",
         "save": "Sauvegarder",
         "back": "Retour",
-        "dashboard":"dashboard"
+        "dashboard": "Patients téléchargés",
+        "up": "Télécharger un patient"
     }
 }
