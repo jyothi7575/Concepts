@@ -11,7 +11,11 @@ export const claims = {
         "status": "Status",
         "attachments": "Attachments",
         "dashboard": "dashboard",
-        "reason": "Reason"
+        "reason": "Reason",
+        "ClaimsRaised": "Claims Raised",
+        "ClaimsInProgress": "Claims In Progress",
+        "ClaimsProcessed": "Claims Processed",
+        "ClaimsRejected": "Claims Rejected",
     },
     "french": {
         "voiladocPID": "VoiladocPID",
@@ -25,6 +29,10 @@ export const claims = {
         "status": "statut",
         "attachments": "Pièces jointes",
         "dashboard": "dashboard",
-        "reason": "Raison"
+        "reason": "Raison",
+        "ClaimsRaised": "Revendications soulevées",
+        "ClaimsInProgress": "Réclamations en cours",
+        "ClaimsProcessed": "Réclamations traitées",
+        "ClaimsRejected": "Réclamations rejetées",
     }
 }
