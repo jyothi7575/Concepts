@@ -14,7 +14,8 @@
 }
 
 .bg {
-    background-image: url(../../assets/images/bg1.png);
+    /* background-image: url(../../assets/images/bg1.png); */
+    background-image: url(../../assets/images/bg2.jpeg);
     background-color: #ccc;
     height: 100vh;
     background-position: center;
@@ -38,7 +39,13 @@
     width: 50%;
 }
 
-
+.forgot{
+    text-align: right;
+    color: #f17e2e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+}
 
 
 
