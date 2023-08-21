@@ -4,8 +4,16 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    padding: 0.5rem 0rem 0.5rem 0.5rem;
+    padding: 0.5rem 0rem 0.5rem 1rem;
     cursor: pointer;
+}
+
+.collay {
+    height: 90vh;
+    overflow-y: auto;
+    background-color: #322b6b;
+    color: white;
+    padding-top: 0.5rem;
 }
 
 .menuicon {
@@ -15,6 +23,5 @@
 }
 
 .imagewidth {
-    width: 12px; 
- }
- 
+    width: 12px;
+}
