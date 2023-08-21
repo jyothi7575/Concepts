@@ -11,7 +11,7 @@
     [ngClass]="loaderService.showSpinner? 'background-blur':''">
     <div class="row">
         <div class="col-lg-2">
-            <app-sidebar></app-sidebar>
+            <app-sidebar *ngIf="!reloadRouterOutlet"></app-sidebar>
         </div>
         <div class="col-lg-10">
             <app-header (ChangeLanguage)="changeLanguage()"></app-header>
