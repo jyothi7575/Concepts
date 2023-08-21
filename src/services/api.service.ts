@@ -8,7 +8,8 @@ export class ApiService {
 
   hostURL: string;
 
-  controller: string = sessionStorage.getItem('controller') || "EBM";
+  controller: string = sessionStorage.getItem('controller') || "EBM"; 
+  controller1: string = sessionStorage.getItem('controller1') || "Claims"; 
 
   languageID: string = sessionStorage.getItem('languageID') || "1";
 

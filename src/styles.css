@@ -49,11 +49,12 @@ tr:nth-child(even) {
 }
 
 .headercard {
-    box-shadow: 0 4px 8px 0 rgba(0.2, 0.2, 0.2, 0.2);
+    box-shadow: 0 4px 8px 10px rgba(0.2, 0.2, 0.2, 0.2);
     transition: 0.3s;
     border-radius: 10px;
     background-color: white;
     padding: 15px;
+    margin-top: 20px;
 }
 
 
@@ -110,5 +111,5 @@ tr:nth-child(even) {
     float: right;
     min-width: 80px;
     border-radius: 12px;
-  
-  }
+
+}

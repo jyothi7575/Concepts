@@ -17,6 +17,7 @@ export const patient = {
         "policyExpiryDate": "Policy Expiry Date",
         "save": "Save",
         "back": "Back",
+        "dashboard":"dashboard"
     },
     "french": {
         "name": "Nom",
@@ -36,5 +37,6 @@ export const patient = {
         "policyExpiryDate": "Date d'expiration de la police",
         "save": "Sauvegarder",
         "back": "Retour",
+        "dashboard":"dashboard"
     }
 }
