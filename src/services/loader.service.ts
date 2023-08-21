@@ -11,7 +11,7 @@ export class LoaderService {
 
   isLogin: any = sessionStorage.getItem("isLogin") || 'no';
 
-  userName: any = sessionStorage.getItem("userName") || 'saamurott';
+  userName: any = sessionStorage.getItem("userName") || 'EBM';
 
   menu: any = sessionStorage.getItem("menu") || 'Dashboard';
 
