@@ -16,7 +16,7 @@ export class PatientRegistrationComponent {
   languageID: any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
   ngOnInit() {
-    this.languageID = sessionStorage.getItem('languageID');
+    this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? patient.english : patient.french;
     this.clearForm();
   }
