@@ -12,7 +12,7 @@ export class PatientsComponent {
 
   labels: any;
   languageID: any;
-  
+
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
@@ -26,7 +26,17 @@ export class PatientsComponent {
       "phone": "987543321",
       "email": "hari@gamil.com",
       "gender": "female",
-      "address": "moracco"
+      "address": "moracco",
+      "dob": "30-01-2020",
+      "identity": "989073278987",
+      "insuname": "EMB",
+      "poy": "22",
+      "subNo": "309"
     }
   ]
+  routerlink() {
+    this.router.navigate(['/EBM/PatientRegistartion']);
+
+  }
+
 }
