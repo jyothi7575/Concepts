@@ -1,4 +1,4 @@
-<div class="container-fluid divNegate" *ngIf="loaderService.isLogin=='no'"
+<div class="container-fluid divNegateFull" *ngIf="loaderService.isLogin=='no'"
     [ngClass]="loaderService.showSpinner? 'background-blur':''">
     <div class="row">
         <div class="col-lg-12">
@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="container-fluid divNegate" *ngIf="loaderService.isLogin=='yes'"
+<div class="container-fluid divNegateLeft" *ngIf="loaderService.isLogin=='yes'"
     [ngClass]="loaderService.showSpinner? 'background-blur':''">
     <div class="row">
         <div class="col-lg-2">
