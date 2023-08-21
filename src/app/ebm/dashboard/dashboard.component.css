@@ -11,3 +11,9 @@
     color: #f17e2d;
     font-size: 20px;
 }
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
