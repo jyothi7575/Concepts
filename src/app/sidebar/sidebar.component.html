@@ -11,29 +11,24 @@
             <img src="assets/images/arrow1.png" class="imagewidth">
             <span style="font-size: 16px;">&nbsp;&nbsp;Patients</span>
         </div>
-        <div>
-            <div data-bs-toggle="collapse" data-bs-target="#claims" data-toggle="collapse">
-                &nbsp;<img src="assets/images/arrow1.png" class="imagewidth">
-                <span style="font-size: 16px;">&nbsp;&nbsp;Claims</span>
-            </div>
-            <div class="collapse list-unstyled" id="claims">
-                <div class="menu" (click)="navigate1('ClaimsProgress')">
-                    &nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/arrow1.png" class="imagewidth">
-                    <span style="font-size: 16px;">&nbsp;&nbsp;Claims Progress</span>
-                </div>
-                <div class="menu" (click)="navigate1('ClaimsProcessed')">
-                    &nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/arrow1.png" class="imagewidth">
-                    <span style="font-size: 16px;">&nbsp;&nbsp;Claims Processed</span>
-                </div>
-                <div class="menu" (click)="navigate1('ClaimsRaised')">
-                    &nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/arrow1.png" class="imagewidth">
-                    <span style="font-size: 16px;">&nbsp;&nbsp;Claims Raised</span>
-                </div>
-                <div class="menu" (click)="navigate1('ClaimsRejected')">
-                    &nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/arrow1.png" class="imagewidth">
-                    <span style="font-size: 16px;">&nbsp;&nbsp;Claims Rejected</span>
-                </div>
-            </div>
+        <div class="menu" (click)="navigate('Claims/ClaimsRaised')">
+            <img src="assets/images/arrow1.png" class="imagewidth">
+            <span style="font-size: 16px;">&nbsp;&nbsp;Claims Raised</span>
         </div>
+        <div class="menu" (click)="navigate('Claims/ClaimsProgress')">
+            <img src="assets/images/arrow1.png" class="imagewidth">
+            <span style="font-size: 16px;">&nbsp;&nbsp;Claims Progress</span>
+        </div>
+        <div class="menu" (click)="navigate('Claims/ClaimsProcessed')">
+            <img src="assets/images/arrow1.png" class="imagewidth">
+            <span style="font-size: 16px;">&nbsp;&nbsp;Claims Processed</span>
+        </div>
+
+        <div class="menu" (click)="navigate('Claims/ClaimsRejected')">
+            <img src="assets/images/arrow1.png" class="imagewidth">
+            <span style="font-size: 16px;">&nbsp;&nbsp;Claims Rejected</span>
+        </div>
+
+
     </div>
 </div>

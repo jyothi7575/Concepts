@@ -7,7 +7,11 @@ import { PatientRegistrationComponent } from './patient-registration/patient-reg
 const routes: Routes = [
   { path: 'Dashboard', component: DashboardComponent, pathMatch: 'full' },
   { path: 'Patients', component: PatientsComponent, pathMatch: 'full' },
-  { path: 'PatientRegistartion', component: PatientRegistrationComponent, pathMatch: 'full' }
+  { path: 'PatientRegistartion', component: PatientRegistrationComponent, pathMatch: 'full' },
+  {
+    path: 'Claims', 
+    loadChildren: () => import('../ebm/claims/claims.module').then(m => m.ClaimsModule)
+  },
 ];
 
 @NgModule({

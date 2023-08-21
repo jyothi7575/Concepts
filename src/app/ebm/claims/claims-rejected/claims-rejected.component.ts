@@ -29,6 +29,7 @@ export class ClaimsRejectedComponent {
       'subscriptionNumber': "321",
       "claimAmount": "20000",
       "status": "Rejected",
+      "reason":"Document verification failed",
       "attachments": "https://maroc.voiladoc.org//VoiladocTestAPI/PatientDocuments/21278/SoapNotes/20230710120845images.jpg"
     }
   ]

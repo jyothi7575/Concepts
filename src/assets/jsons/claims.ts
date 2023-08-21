@@ -10,7 +10,8 @@ export const claims = {
         "claimAmount": "Claim Amount",
         "status": "Status",
         "attachments": "Attachments",
-        "dashboard": "dashboard"
+        "dashboard": "dashboard",
+        "reason": "Reason"
     },
     "french": {
         "voiladocPID": "VoiladocPID",
@@ -23,6 +24,7 @@ export const claims = {
         "claim Amount": "Montant de la réclamation",
         "status": "statut",
         "attachments": "Pièces jointes",
-        "dashboard": "dashboard"
+        "dashboard": "dashboard",
+        "reason": "Raison"
     }
 }

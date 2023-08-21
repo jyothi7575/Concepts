@@ -10,10 +10,7 @@ const routes: Routes = [
     path: 'EBM',
     loadChildren: () => import('../app/ebm/ebm.module').then(m => m.EBMModule)
   },
-  {
-    path: 'Claims', 
-    loadChildren: () => import('./ebm/claims/claims.module').then(m => m.ClaimsModule)
-  },
+ 
   { path: '**', component: ErrorComponent }
 ];
 
