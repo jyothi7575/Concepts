@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     this.loaderService.showSpinner = true;
     this.loaderService.isLogin = 'yes';
     sessionStorage.setItem("isLogin", "yes");
-    this.router.navigate(['/EBM/Dashboard']);
+    this.router.navigate(['/Dashboard']);
   }
 
   languageChange(event: any) {

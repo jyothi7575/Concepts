@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { claims } from '../../../../assets/jsons/claims';
+import { claims } from '../../../assets/jsons/claims';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-claims-rejected',
-  templateUrl: './claims-rejected.component.html',
-  styleUrls: ['./claims-rejected.component.css']
+  selector: 'app-claims-raised',
+  templateUrl: './claims-raised.component.html',
+  styleUrls: ['./claims-raised.component.css']
 })
-export class ClaimsRejectedComponent {
+export class ClaimsRaisedComponent {
   labels: any;
   languageID: any;
 
@@ -28,8 +28,7 @@ export class ClaimsRejectedComponent {
       "policyNumber": "123",
       'subscriptionNumber': "321",
       "claimAmount": "20000",
-      "status": "Rejected",
-      "reason":"Document verification failed",
+      "status": "Pending",
       "attachments": "https://maroc.voiladoc.org//VoiladocTestAPI/PatientDocuments/21278/SoapNotes/20230710120845images.jpg"
     }
   ]

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
-import { patient } from '../../../assets/jsons/patient';
+import { patient } from '../../assets/jsons/patient';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

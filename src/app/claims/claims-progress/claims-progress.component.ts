@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { claims } from '../../../../assets/jsons/claims';
+import { claims } from '../../../assets/jsons/claims';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-claims-processed',
-  templateUrl: './claims-processed.component.html',
-  styleUrls: ['./claims-processed.component.css']
+  selector: 'app-claims-progress',
+  templateUrl: './claims-progress.component.html',
+  styleUrls: ['./claims-progress.component.css']
 })
-export class ClaimsProcessedComponent {
+export class ClaimsProgressComponent {
   labels: any;
   languageID: any;
 
@@ -28,11 +28,11 @@ export class ClaimsProcessedComponent {
       "policyNumber": "123",
       'subscriptionNumber': "321",
       "claimAmount": "20000",
-      "status": "completed",
+      "status": "Pending",
       "attachments": "https://maroc.voiladoc.org//VoiladocTestAPI/PatientDocuments/21278/SoapNotes/20230710120845images.jpg"
     }
   ]
-  showcet(data: any) {
+  showcet(data:any){
     window.open(data);
   }
 }

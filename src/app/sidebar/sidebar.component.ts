@@ -19,10 +19,7 @@ export class SidebarComponent implements OnInit {
   }
 
   navigate(url: any) {
-    this.router.navigate([`/${this.apiService.controller}/${url}`]);
-  }
-  navigate1(url: any) {
-    this.router.navigate([`/${this.apiService.controller1}/${url}`]);
+    this.router.navigate([`/${url}`]);
   }
 
 }

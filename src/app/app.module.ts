@@ -9,6 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './error/error.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PatientRegistrationComponent } from './patient-registration/patient-registration.component';
+import { PatientsComponent } from './patients/patients.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ErrorComponent } from './error/error.component';
     LoaderComponent,
     HeaderComponent,
     SidebarComponent,
-    ErrorComponent
+    ErrorComponent,
+    DashboardComponent,
+    PatientsComponent,
+    PatientRegistrationComponent
   ],
   imports: [
     BrowserModule,
