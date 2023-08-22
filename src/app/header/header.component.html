@@ -8,14 +8,10 @@
         </div>
         <div style="display: flex; align-items: center;">
             <div class="switchlay">
-                <label>English</label>
-                &nbsp;
-                <label class="switch">
-                    <input type="checkbox" (change)="languageChange($event)" [checked]="apiService.languageID=='6'">
-                    <span class="slider"></span>
-                </label>
-                &nbsp;
-                <label>Français</label>
+                <select class="form-control lang" [(ngModel)]="languageID" (change)="languageChange($event)">
+                    <option value="1">En</option>
+                    <option value="6">Fr</option>
+                </select>
             </div>
             &nbsp;
             &nbsp;

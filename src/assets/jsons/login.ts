@@ -6,7 +6,8 @@ export const login = {
         "pin": "Pin Code",
         "pleaseWait": "Please wait...",
         "weareFetching": "We are Fetching Data",
-        "forgot": "Forgot Password ?"
+        "forgot": "Forgot Password ?",
+        "insurance": "Insurance"
     },
     "french": {
         "login": "Se connecter",
@@ -15,6 +16,7 @@ export const login = {
         "pin": "Code PIN",
         "pleaseWait": "Patientez s'il-vous-plait...",
         "weareFetching": "Nous récupérons vos données.",
-        "forgot": "Mot de passe oublié ?"
+        "forgot": "Mot de passe oublié ?",
+        "insurance": "Assurance"
     }
 }

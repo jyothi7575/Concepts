@@ -11,11 +11,13 @@ import { login } from '../../assets/jsons/login';
 })
 export class LoginComponent implements OnInit, AfterViewInit {
   labels: any;
+  languageID: any;
 
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
     this.labels = this.apiService.languageID == '1' ? login.english : login.french;
+    this.languageID = this.apiService.languageID;
   }
 
   ngAfterViewInit() {
@@ -32,16 +34,17 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   languageChange(event: any) {
-    if (event.target.checked) {
+    if (event.target.value == '6') {
       this.apiService.languageID = '6';
-      sessionStorage.setItem("languageID","6");
+      sessionStorage.setItem("languageID", "6");
       this.labels = login.french;
     }
     else {
       this.apiService.languageID = '1';
-      sessionStorage.setItem("languageID","1");
+      sessionStorage.setItem("languageID", "1");
       this.labels = login.english;
     }
+    this.languageID = this.apiService.languageID;
   }
 
 }

@@ -8,19 +8,17 @@
                 <div class="card" style="padding: 2rem;">
                     <div style="text-align: center;">
                         <img src="assets/images/mainlogo.png" style="width: 10rem;" class="mt-3">
+                        <br>
+                        <h5 style="color: #322b6b;">{{labels.insurance}}</h5>
                     </div>
-                    <br>
                     <div class="tllay">
-                        <h5>{{labels.login}}</h5>
-                        <h5>|</h5>
-                        <div class="switchlay">
-                            <label>English</label>
-                            <label class="switch">
-                                <input type="checkbox" (change)="languageChange($event)"
-                                    [checked]="apiService.languageID=='6'">
-                                <span class="slider"></span>
-                            </label>
-                            <label>Français</label>
+                        <h5 style="color: #322b6b;">{{labels.login}}</h5>
+                        <div>
+                            <select class="form-control lang" [(ngModel)]="languageID"
+                                (change)="languageChange($event)">
+                                <option value="1">En</option>
+                                <option value="6">Fr</option>
+                            </select>
                         </div>
                     </div>
                     <br>

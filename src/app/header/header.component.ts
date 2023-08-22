@@ -11,6 +11,7 @@ import { login } from '../../assets/jsons/login';
 export class HeaderComponent {
 
   @Output() ChangeLanguage = new EventEmitter();
+  languageID: any;
 
   constructor(public loaderService: LoaderService, public apiService: ApiService, public router: Router) { }
 
@@ -18,6 +19,7 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.labels = this.apiService.languageID == '1' ? login.english : login.french;
+    this.languageID = this.apiService.languageID;
   }
 
   logout() {
@@ -29,7 +31,7 @@ export class HeaderComponent {
   }
 
   languageChange(event: any) {
-    if (event.target.checked) {
+    if (event.target.value == '6') {
       this.apiService.languageID = '6';
       sessionStorage.setItem("languageID", "6");
       this.labels = login.french;
@@ -39,6 +41,7 @@ export class HeaderComponent {
       sessionStorage.setItem("languageID", "1");
       this.labels = login.english;
     }
+    this.languageID = this.apiService.languageID;
     this.ChangeLanguage.emit();
   }
 }
