@@ -14,6 +14,8 @@ export class PatientRegistrationComponent {
   patientForms: FormGroup | any
   labels: any;
   languageID: any;
+  selfpay: any;
+  noPay: any
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
   ngOnInit() {
     this.languageID = this.apiService.languageID;
@@ -36,5 +38,7 @@ export class PatientRegistrationComponent {
 
     });
   }
-
+  routerLink() {
+    this.router.navigate(['/Patients']);
+  }
 }

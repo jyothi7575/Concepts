@@ -35,7 +35,7 @@ export class PatientsComponent {
     }
   ]
   routerlink() {
-    this.router.navigate(['/EBM/PatientRegistartion']);
+    this.router.navigate(['/PatientRegistartion']);
 
   }
 

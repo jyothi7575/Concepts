@@ -5,7 +5,8 @@ export const sidebar = {
         "ClaimsRaised": "Claims Raised",
         "ClaimsInProgress": "Claims In Progress",
         "ClaimsProcessed": "Claims Processed",
-        "ClaimsRejected": "Claims Rejected"
+        "ClaimsRejected": "Claims Rejected",
+        "policholders": "policy holders"
     },
     "french": {
         "Dashboard": "Tableau de bord",
@@ -13,6 +14,7 @@ export const sidebar = {
         "ClaimsRaised": "Revendications soulevées",
         "ClaimsInProgress": "Réclamations en cours",
         "ClaimsProcessed": "Réclamations traitées",
-        "ClaimsRejected": "Réclamations rejetées"
+        "ClaimsRejected": "Réclamations rejetées",
+        "policholders": "assurés"
     }
 }

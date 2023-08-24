@@ -24,7 +24,9 @@ export const patient = {
                 "ClaimsProcessed": "Claims Processed",
                 "ClaimsRejected": "Claims Rejected",
                 "Dashboard": "Dashboard",
-                "patients":"Patients"
+                "patients": "Patients",
+                "uploadedpolicholders": "upload policy holders",
+                "uploadedpolicholdersReg": "upload policyholders Registrations"
         },
         "french": {
                 "name": "Nom",
@@ -51,6 +53,9 @@ export const patient = {
                 "ClaimsProcessed": "Réclamations traitées",
                 "ClaimsRejected": "Réclamations rejetées",
                 "Dashboard": "Tableau de bord",
-                "patients":"les patients"
+                "patients": "les patients",
+                "policholders": "assurés",
+                "uploadedpolicholders":'télécharger les assurés',
+                "uploadedpolicholdersReg": "télécharger les inscriptions des assurés"
         }
 }
