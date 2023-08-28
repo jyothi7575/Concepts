@@ -12,7 +12,9 @@ import { login } from '../../assets/jsons/login';
 export class LoginComponent implements OnInit, AfterViewInit {
   labels: any;
   languageID: any;
-
+  pin: any;
+  username: any;
+  password: any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
@@ -26,11 +28,20 @@ export class LoginComponent implements OnInit, AfterViewInit {
     }, 500);
   }
 
-  login() {
+  async login() {
+    debugger;
     this.loaderService.showSpinner = true;
-    this.loaderService.isLogin = 'yes';
-    sessionStorage.setItem("isLogin", "yes");
-    this.router.navigate(['/Dashboard']);
+    if (this.username && this.password && this.pin) {
+      const res = await this.apiService.commonGetCall(`IebManager/GetInsuranceCompanyLogin?UserName=${this.username}&Password=${this.password}&LanguageID=${this.languageID}&Pinno=${this.pin}`);
+      console.log('res' + res)
+      if (res.status === 200) {
+        this.loaderService.isLogin = 'yes';
+        sessionStorage.setItem("isLogin", "yes");
+        sessionStorage.setItem('temp', '1');
+        this.router.navigate(['/Dashboard']);
+
+      }
+    }
   }
 
   languageChange(event: any) {

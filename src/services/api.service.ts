@@ -18,11 +18,11 @@ export class ApiService {
   }
 
   public async commonPostCall(endPoint: string, data: any) {
-    return await axios.post(this.hostURL + this.controller + endPoint, data);
+    return await axios.post(this.hostURL  + endPoint, data);
   }
 
   public async commonGetCall(endPoint: string) {
-    return await axios.get(this.hostURL + this.controller + endPoint);
+    return await axios.get(this.hostURL + endPoint);
   }
 
   public async commonGetMasters(endPoint: string) {

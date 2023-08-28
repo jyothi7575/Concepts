@@ -22,11 +22,11 @@
                         </div>
                     </div>
                     <br>
-                    <input type="text" class="form-control" placeholder="{{labels.pin}}">
+                    <input type="text" class="form-control" placeholder="{{labels.pin}}" [(ngModel)]="pin" >
                     <br>
-                    <input type="text" class="form-control" placeholder="{{labels.username}}">
+                    <input type="text" class="form-control" placeholder="{{labels.username}}" [(ngModel)]="username">
                     <br>
-                    <input type="text" class="form-control" placeholder="{{labels.password}}">
+                    <input type="text" class="form-control" placeholder="{{labels.password}}" [(ngModel)]="password">
                     <br>
                     <button type="button" class="loginbtn" (click)="login()">{{labels.login}}</button>
                     <br>

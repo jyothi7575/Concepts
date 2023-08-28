@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    host: "",
+    host: "https://insurancemaroc-dev.voiladoc.org/insurance-api/"
 };
