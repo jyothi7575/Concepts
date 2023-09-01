@@ -26,7 +26,8 @@ export const patient = {
                 "Dashboard": "Dashboard",
                 "patients": "Patients",
                 "uploadedpolicholders": "upload policy holders",
-                "uploadedpolicholdersReg": "upload policyholders Registrations"
+                "uploadedpolicholdersReg": "upload policyholders Registrations",
+                "PatientName":"Patient Name"
         },
         "french": {
                 "name": "Nom",
@@ -56,6 +57,7 @@ export const patient = {
                 "patients": "les patients",
                 "policholders": "assurés",
                 "uploadedpolicholders":'télécharger les assurés',
-                "uploadedpolicholdersReg": "télécharger les inscriptions des assurés"
+                "uploadedpolicholdersReg": "télécharger les inscriptions des assurés",
+                "PatientName":"Patient Name"
         }
 }

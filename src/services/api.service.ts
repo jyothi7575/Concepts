@@ -26,6 +26,6 @@ export class ApiService {
   }
 
   public async commonGetMasters(endPoint: string) {
-    return await axios.get(this.hostURL + this.controller + endPoint);
+    return await axios.get(this.hostURL + endPoint);
   }
 }

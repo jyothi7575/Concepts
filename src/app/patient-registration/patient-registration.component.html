@@ -9,14 +9,14 @@
     <form [formGroup]="patientForms">
         <div class="row">
             <div class="col-lg-3">
-                <label>{{labels.firstName}}<span class="commonask">*</span></label>
+                <label>{{labels.PatientName}}<span class="commonask">*</span></label>
                 <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.firstName}}" name="firstName" required formControlName="firstName">
+                    placeholder="{{labels.PatientName}}" name="PatientName" required formControlName="PatientName">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.lastName}}<span class="commonask">*</span></label>
                 <input type="text" placeholder="{{labels.lastName}}" class="form-control inputfield" required
-                    id="floatingInput" name="lastName" required formControlName="lastName">
+                    id="floatingInput" name="LastName" required formControlName="LastName">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.dateOfBirth}}<span class="commonask">*</span></label>
@@ -31,12 +31,12 @@
             <div class="col-lg-3">
                 <label>{{labels.telephone}}<span class="commonask">*</span></label>
                 <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.telephone}}" name="telephone" required formControlName="telephone">
+                    placeholder="{{labels.telephone}}" name="MobileNumber" required formControlName="MobileNumber">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.email}}<span class="commonask">*</span></label>
                 <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.email}}" name="email" required formControlName="email">
+                    placeholder="{{labels.email}}" name="EmailID" required formControlName="EmailID">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.identityNumber}}<span class="commonask">*</span></label>

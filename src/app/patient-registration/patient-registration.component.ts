@@ -16,27 +16,54 @@ export class PatientRegistrationComponent {
   languageID: any;
   selfpay: any;
   noPay: any
+  downloadMasterID: any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
   ngOnInit() {
     this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? patient.english : patient.french;
     this.clearForm();
+    this.downloadMasterID = sessionStorage.getItem('downloadMasterID')
   }
   async clearForm() {
     this.patientForms = new FormGroup({
-      firstName: new FormControl("", Validators.required),
-      lastName: new FormControl("", Validators.required),
+      PatientName: new FormControl("", Validators.required),
+      LastName: new FormControl("", Validators.required),
       dateOfBirth: new FormControl("",),
       gender: new FormControl("", Validators.required),
-      telephone: new FormControl("", Validators.required),
-      email: new FormControl("", Validators.required),
-      identityNumber: new FormControl("",),
-      insuranceCompanyName: new FormControl("",),
+      MobileNumber: new FormControl("", Validators.required),
+      EmailID: new FormControl("", Validators.required),
       subscriptionNumber: new FormControl("", Validators.required),
       policyNumber: new FormControl("", Validators.required),
-      policyExpiryDate: new FormControl("", Validators.required)
-
+      policyExpiryDate: new FormControl("", Validators.required),
+      insuranceCompanyName: new FormControl(""),
+      identityNumber:new FormControl(""),
+      Password: new FormControl(""),
+      OTP: new FormControl(""),
+      AdultBit: new FormControl(""),
+      PatientID: new FormControl(""),
+      DownloadType: new FormControl(""),
+      CountryCodeNew: new FormControl(""),
+      CountryID: new FormControl(""),
+      PromoCodeID: new FormControl(""),
+      PromoCode: new FormControl("")
     });
+  }
+
+  insertPatient() {
+    /* PatientName = PatientRegistrationEntity.PatientName,
+                    MobileNumber = PatientRegistrationEntity.MobileNumber,
+                    EmailID = PatientRegistrationEntity.EmailID,
+                    Password = PatientRegistrationEntity.Password,
+                    OTP = PatientRegistrationEntity.OTP,
+                    AdultBit = PatientRegistrationEntity.AdultBit,
+                    RelationshipTypeID = PatientRegistrationEntity.RelationshipTypeID,
+                    PatientID = PatientRegistrationEntity.PatientID,
+                    LastName = PatientRegistrationEntity.LastName,
+                    DownloadType = PatientRegistrationEntity.DownloadType,
+                    CountryCodeNew = PatientRegistrationEntity.CountryCodeNew,
+                    CountryID = PatientRegistrationEntity.CountryID,
+                    PromoCodeID = PatientRegistrationEntity.PromoCodeID,
+                    PromoCode = PatientRegistrationEntity.PromoCode */
   }
   routerLink() {
     this.router.navigate(['/Patients']);

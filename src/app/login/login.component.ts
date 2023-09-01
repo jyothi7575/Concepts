@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   pin: any;
   username: any;
   password: any;
+  result: any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
@@ -32,12 +33,22 @@ export class LoginComponent implements OnInit, AfterViewInit {
     debugger;
     this.loaderService.showSpinner = true;
     if (this.username && this.password && this.pin) {
-      const res = await this.apiService.commonGetCall(`IebManager/GetInsuranceCompanyLogin?UserName=${this.username}&Password=${this.password}&LanguageID=${this.languageID}&Pinno=${this.pin}`);
-      console.log('res' + res)
+
+      const res = await this.apiService.commonGetCall(`EBM/GetInsuranceCompanyLogin?UserName=${this.username}&Password=${this.password}&LanguageID=${this.languageID}&Pinno=${this.pin}`);
+      this.result = res;
+      debugger;
+      console.log('res' + this.result)
       if (res.status === 200) {
         this.loaderService.isLogin = 'yes';
         sessionStorage.setItem("isLogin", "yes");
         sessionStorage.setItem('temp', '1');
+        sessionStorage.setItem('user', this.result.data[0].companyName)
+        sessionStorage.setItem('roleid', '10');
+        sessionStorage.setItem('Pinno', this.pin);
+        sessionStorage.setItem('pincode', this.result.data[0].pincode);
+        sessionStorage.setItem('Password', this.password);
+        sessionStorage.setItem('temp', '1');
+        sessionStorage.setItem('downloadMasterID', this.result.data[0].downloadMasterID)
         this.router.navigate(['/Dashboard']);
 
       }
