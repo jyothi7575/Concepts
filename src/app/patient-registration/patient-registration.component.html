@@ -9,34 +9,34 @@
     <form [formGroup]="patientForms">
         <div class="row">
             <div class="col-lg-3">
-                <label>{{labels.PatientName}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.PatientName}}" name="PatientName" required formControlName="PatientName">
+                <label>{{labels.firstName}}<span class="commonask">*</span></label>
+                <input type="text" class="form-control inputfield"  id="floatingInput"
+                    placeholder="{{labels.PatientName}}" name="PatientName" required formControlName="firstName">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.lastName}}<span class="commonask">*</span></label>
-                <input type="text" placeholder="{{labels.lastName}}" class="form-control inputfield" required
+                <input type="text" placeholder="{{labels.lastName}}" class="form-control inputfield" 
                     id="floatingInput" name="LastName" required formControlName="LastName">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.dateOfBirth}}<span class="commonask">*</span></label>
-                <input type="date" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.dateOfBirth}}" name="dateOfBirth" required formControlName="dateOfBirth">
+                <input type="date" class="form-control inputfield"  id="floatingInput"
+                    placeholder="{{labels.dateOfBirth}}" name="dateOfBirth"  formControlName="dateOfBirth">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.gender}}</label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.gender}}" name="gender" required formControlName="gender">
+                <input type="text" class="form-control inputfield"  id="floatingInput"
+                    placeholder="{{labels.gender}}" name="gender" formControlName="gender">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.telephone}}<span class="commonask">*</span></label>
                 <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.telephone}}" name="MobileNumber" required formControlName="MobileNumber">
+                    placeholder="{{labels.telephone}}" name="mobileNumber" required formControlName="mobileNumber">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.email}}<span class="commonask">*</span></label>
                 <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.email}}" name="EmailID" required formControlName="EmailID">
+                    placeholder="{{labels.email}}" name="email" required formControlName="email">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.identityNumber}}<span class="commonask">*</span></label>
@@ -46,25 +46,25 @@
             </div>
             <div class="col-lg-3">
                 <label>{{labels.insuranceCompanyName}}</label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.insuranceCompanyName}}" name="insuranceCompanyName" required
+                <input type="text" class="form-control inputfield"  id="floatingInput"
+                    placeholder="{{labels.insuranceCompanyName}}" name="insuranceCompanyName" 
                     formControlName="insuranceCompanyName">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.subscriptionNumber}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
+                <input type="text" class="form-control inputfield"  id="floatingInput"
                     placeholder="{{labels.subscriptionNumber}}" name="subscriptionNumber" required
                     formControlName="subscriptionNumber">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.policyNumber}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
+                <input type="text" class="form-control inputfield"  id="floatingInput"
                     placeholder="{{labels.policyNumber}}" name="policyNumber" required formControlName="policyNumber">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.policyExpiryDate}}</label>
                 <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.policyExpiryDate}}" name="policyExpiryDate" required
+                    placeholder="{{labels.policyExpiryDate}}" name="policyExpiryDate" 
                     formControlName="policyExpiryDate">
             </div>
             <div class="col-lg-8"></div>
@@ -72,7 +72,7 @@
                 <button class="save"(click)="routerLink()">{{labels.back}}</button>
             </div>
             <div class="col-lg-2">
-                <button class="save">{{labels.save}}</button>
+                <button class="save" (click)="insertPatient()">{{labels.save}}</button>
             </div>
         </div>
     </form>
