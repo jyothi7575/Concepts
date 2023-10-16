@@ -20,12 +20,12 @@
                 <th>{{labels.subscripNo}}</th>
                 <th>{{labels.claimAmount}}</th>
                 <th>{{labels.status}}</th>
-                <th>{{labels.attachments}}</th>
+                <th>Folder ID</th>
             </tr>
             <tr *ngFor="let details of data">
 
-                <td>{{details.voiladocPID}}</td>
-                <td>{{details.name}}</td>
+                <td>{{details.patientID}}</td>
+                <td>{{details.patientName}}</td>
                 <td>{{details.phoneNumber}}</td>
                 <td>{{details.emailID}}</td>
                 <td>{{details.insuranceCompany}}</td>
@@ -33,10 +33,11 @@
                 <td>{{details.subscriptionNumber}}</td>
                 <td>{{details.claimAmount}}</td>
                 <td>{{details.status}}</td>
-                <td>
+                <td>{{details.folderID}}</td>
+                <!-- <td>
                     <img src="assets/images/ViewDetails.png" class="editdelete"
                         (click)="showcet(details.attachments)" />
-                </td>
+                </td> -->
             </tr>
         </table>
     </div>

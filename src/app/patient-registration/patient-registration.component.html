@@ -6,74 +6,111 @@
     </div>
 </div>
 <div class="card">
-    <form [formGroup]="patientForms">
+    <form [formGroup]="patientForms" (ngSubmit)="insertPatient()">
         <div class="row">
             <div class="col-lg-3">
                 <label>{{labels.firstName}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield"  id="floatingInput"
-                    placeholder="{{labels.PatientName}}" name="PatientName" required formControlName="firstName">
+                <input type="text" class="form-control"  id="floatingInput"
+                    placeholder="{{labels.PatientName}}" name="PatientName" required formControlName="firstName"  [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.firstName.touched) && patientForms.controls.firstName.errors?.required
+                      }">                      
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.firstName.touched) && patientForms.controls.firstName.errors?.required">First name is required</span>
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.firstName.touched)  && patientForms.controls.firstName.errors?.minlength || patientForms.controls.firstName.errors?.maxlength">First name should be between 5 to 50 characters</span>
             </div>
             <div class="col-lg-3">
                 <label>{{labels.lastName}}<span class="commonask">*</span></label>
-                <input type="text" placeholder="{{labels.lastName}}" class="form-control inputfield" 
-                    id="floatingInput" name="LastName" required formControlName="LastName">
+                <input type="text" placeholder="{{labels.lastName}}" class="form-control " 
+                    id="floatingInput" name="LastName" required formControlName="lastName"[ngClass]="{
+                        'is-invalid': ((formSubmitted || patientForms.controls.lastName.touched) && patientForms.controls.lastName.errors?.required) || ((formSubmitted || patientForms.controls.lastName.touched)  && patientForms.controls.lastName.errors?.minlength )
+                      }">
+                      <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.lastName.touched) && patientForms.controls.lastName.errors?.required">Last name is required</span>
             </div>
             <div class="col-lg-3">
                 <label>{{labels.dateOfBirth}}<span class="commonask">*</span></label>
-                <input type="date" class="form-control inputfield"  id="floatingInput"
-                    placeholder="{{labels.dateOfBirth}}" name="dateOfBirth"  formControlName="dateOfBirth">
+                <input type="date" class="form-control "  id="floatingInput"
+                    placeholder="{{labels.dateOfBirth}}" name="dateOfBirth"  formControlName="dateOfBirth"  [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.dateOfBirth.touched) && patientForms.controls.dateOfBirth.errors?.required
+                      }">
+
+                      <span class="validation-error" *ngIf=" (formSubmitted || patientForms.controls.dateOfBirth.touched) && patientForms.controls.dateOfBirth.errors?.required">Date of birth is required</span>
             </div>
             <div class="col-lg-3">
                 <label>{{labels.gender}}</label>
-                <input type="text" class="form-control inputfield"  id="floatingInput"
+                <input type="text" class="form-control "  id="floatingInput"
                     placeholder="{{labels.gender}}" name="gender" formControlName="gender">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.telephone}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.telephone}}" name="mobileNumber" required formControlName="mobileNumber">
+                <input type="text" class="form-control " required id="floatingInput"
+                    placeholder="{{labels.telephone}}" name="mobileNumber" required formControlName="mobileNumber"  [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.mobileNumber.touched) && patientForms.controls.mobileNumber.errors?.required
+                      }">
+
+                      <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.mobileNumber.touched) && patientForms.controls.mobileNumber.errors?.required">Mobile number is required</span>
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.mobileNumber.touched)  && patientForms.controls.mobileNumber.errors?.minlength || patientForms.controls.mobileNumber.errors?.maxlength">Mobile number between 1 to 10 characters</span>
             </div>
             <div class="col-lg-3">
                 <label>{{labels.email}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
-                    placeholder="{{labels.email}}" name="email" required formControlName="email">
+                <input type="text" class="form-control " required id="floatingInput"
+                    placeholder="{{labels.email}}" name="email" required formControlName="email" [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.email.touched) && patientForms.controls.email.errors?.required 
+                      }">
+                      <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.email.touched) && patientForms.controls.email.errors?.required">Email is required</span>
+                      <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.email.touched) && patientForms.controls.email.errors?.pattern">Invalid email format.</span>
             </div>
             <div class="col-lg-3">
                 <label>{{labels.identityNumber}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
+                <input type="text" class="form-control " required id="floatingInput"
                     placeholder="{{labels.identityNumber}}" name="identityNumber" required
-                    formControlName="identityNumber">
+                    formControlName="identityNumber" [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.identityNumber.touched) && patientForms.controls.identityNumber.errors?.required 
+                      }">
+                      <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.identityNumber.touched) && patientForms.controls.identityNumber.errors?.required">Identity Number is required</span>
+                      <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.identityNumber.touched)  && patientForms.controls.identityNumber.errors?.minlength " >Identity Number should be more then 3 characters</span>
             </div>
             <div class="col-lg-3">
                 <label>{{labels.insuranceCompanyName}}</label>
-                <input type="text" class="form-control inputfield"  id="floatingInput"
+                <input type="text" class="form-control "  id="floatingInput"
                     placeholder="{{labels.insuranceCompanyName}}" name="insuranceCompanyName" 
                     formControlName="insuranceCompanyName">
             </div>
             <div class="col-lg-3">
                 <label>{{labels.subscriptionNumber}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield"  id="floatingInput"
+                <input type="text" class="form-control "  id="floatingInput"
                     placeholder="{{labels.subscriptionNumber}}" name="subscriptionNumber" required
-                    formControlName="subscriptionNumber">
+                    formControlName="subscriptionNumber" [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.subscriptionNumber.touched) && patientForms.controls.subscriptionNumber.errors?.required 
+                      }">
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.subscriptionNumber.touched) && patientForms.controls.subscriptionNumber.errors?.required">Subscription Number is required</span>
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.subscriptionNumber.touched)  && patientForms.controls.subscriptionNumber.errors?.minlength " >Subscription Number should be more then 3 characters</span>
+       
             </div>
             <div class="col-lg-3">
                 <label>{{labels.policyNumber}}<span class="commonask">*</span></label>
-                <input type="text" class="form-control inputfield"  id="floatingInput"
-                    placeholder="{{labels.policyNumber}}" name="policyNumber" required formControlName="policyNumber">
+                <input type="text" class="form-control "  id="floatingInput"
+                    placeholder="{{labels.policyNumber}}" name="policyNumber" required formControlName="policyNumber" [ngClass]="{
+                        'is-invalid': (formSubmitted || patientForms.controls.policyNumber.touched) && patientForms.controls.policyNumber.errors?.required 
+                      }">
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.policyNumber.touched) && patientForms.controls.policyNumber.errors?.required">Policy Number is required</span>
+                    <span class="validation-error" *ngIf="(formSubmitted || patientForms.controls.policyNumber.touched)  && patientForms.controls.policyNumber.errors?.minlength " >Policy Number should be more then 3 characters</span>
+       
             </div>
             <div class="col-lg-3">
                 <label>{{labels.policyExpiryDate}}</label>
-                <input type="text" class="form-control inputfield" required id="floatingInput"
+                <input type="date" class="form-control " required id="floatingInput"
                     placeholder="{{labels.policyExpiryDate}}" name="policyExpiryDate" 
                     formControlName="policyExpiryDate">
             </div>
+      
+
             <div class="col-lg-8"></div>
-            <div class="col-lg-2">
+            <div class="col-lg-2">            
+                <br>
                 <button class="save"(click)="routerLink()">{{labels.back}}</button>
             </div>
-            <div class="col-lg-2">
-                <button class="save" (click)="insertPatient()">{{labels.save}}</button>
-            </div>
+            <div class="col-lg-2">             
+                <br>
+            <button class="save" type="submit">Submit</button></div>
         </div>
     </form>
 </div>

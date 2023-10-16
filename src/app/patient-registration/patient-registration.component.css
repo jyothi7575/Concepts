@@ -1,0 +1,17 @@
+.validation-error{
+    color: #dc3545;
+    font-size: 14px;
+}
+
+.form-control-wrapper {
+    position: relative;
+}
+
+.error-icon-hover-area {
+    position: absolute;
+    background-color: transparent;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}

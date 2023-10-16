@@ -6,37 +6,37 @@ import { patient } from '../../assets/jsons/patient';
 @Component({
   selector: 'app-patients',
   templateUrl: './patients.component.html',
-  styleUrls: ['./patients.component.css']
+  styleUrls: ['./patients.component.css'],
 })
 export class PatientsComponent {
-
   labels: any;
   languageID: any;
-
-  constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
+  dataList: any;
+  data: any;
+  constructor(
+    public apiService: ApiService,
+    public loaderService: LoaderService,
+    public router: Router
+  ) {}
 
   ngOnInit() {
     this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? patient.english : patient.french;
+    this.getpatientData();
   }
 
-  data = [
-    {
-      "name": "hari",
-      "phone": "987543321",
-      "email": "hari@gamil.com",
-      "gender": "female",
-      "address": "moracco",
-      "dob": "30-01-2020",
-      "identity": "989073278987",
-      "insuname": "EMB",
-      "poy": "22",
-      "subNo": "309"
-    }
-  ]
+  async getpatientData() {
+    const res = await this.apiService.commonGetCall(
+      'EBM/GetPatientRegistrationDetails'
+    );
+  
+    this.data = res.data.filter(
+      (x: { downloadType: any }) => x.downloadType == 5
+    );
+    console.log(this.data);
+  }
+
   routerlink() {
     this.router.navigate(['/PatientRegistartion']);
-
   }
-
 }

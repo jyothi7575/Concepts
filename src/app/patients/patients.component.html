@@ -20,29 +20,29 @@
                 <th>{{labels.gender}}</th>
                 <th>{{labels.address}}</th>
                 <th>{{labels.identityNumber}}</th>
-                <th>{{labels.insuranceCompanyName}}</th>
+                <!-- <th>{{labels.insuranceCompanyName}}</th> -->
                 <th>{{labels.subscriptionNumber}}</th>
                 <th>{{labels.policyNumber}}</th>
-                <th>{{labels.actions}}</th>
+           
             </tr>
             <tr *ngFor="let details of data">
 
-                <td>{{details.name}}</td>
-                <td>{{details.dob}}</td>
-                <td>{{details.phone}}</td>
-                <td>{{details.email}}</td>
+                <td>{{details.patientName}}</td>
+                <td>{{details.dateOfBirth}}</td>
+                <td>{{details.mobileNumber}}</td>
+                <td>{{details.emailID}}</td>
                 <td>{{details.gender}}</td>
                 <td>{{details.address}}</td>
-                <td>{{details.identity}}</td>
-                <td>{{details.insuname}}</td>
-                <td>{{details.subNo}}</td>
-                <td>{{details.poy}}</td>
+                <td>{{details.nationalIdentityNo}}</td>
+              <!--   <td>{{details.insuname}}</td> -->
+                <td>{{details.subscriptionNo}}</td>
+                <td>{{details.policyNo}}</td>
 
-                <td>
+                <!-- <td>
                     <img src="assets/images/edit.png" class="editdelete">
                     &nbsp;&nbsp;
                     <img src="assets/images/delete.png" class="editdelete">
-                </td>
+                </td> -->
             </tr>
         </table>
     </div>

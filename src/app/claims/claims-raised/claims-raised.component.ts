@@ -11,27 +11,22 @@ import { Router } from '@angular/router';
 export class ClaimsRaisedComponent {
   labels: any;
   languageID: any;
-
+  data:any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
     this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? claims.english : claims.french;
+    this.getpatientData();
   }
-  data = [
-    {
-      "voiladocPID": "123",
-      "name": "EBM",
-      "phoneNumber": "98754321",
-      "emailID": "ebi@gmail.com",
-      'insuranceCompany': "EBI",
-      "policyNumber": "123",
-      'subscriptionNumber': "321",
-      "claimAmount": "20000",
-      "status": "Pending",
-      "attachments": "https://maroc.voiladoc.org//VoiladocTestAPI/PatientDocuments/21278/SoapNotes/20230710120845images.jpg"
-    }
-  ]
+
+  async getpatientData() {
+    const res = await this.apiService.commonGetCall(
+      'EBM/GetInsuranceClaimsDetails'
+    );
+    this.data=res.data
+  }
+ 
   showcet(data:any){
     window.open(data);
   }
