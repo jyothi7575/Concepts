@@ -16,6 +16,8 @@ export const claims = {
         "ClaimsInProgress": "Claims In Progress",
         "ClaimsProcessed": "Claims Processed",
         "ClaimsRejected": "Claims Rejected",
+        "folderId":"Folder ID",
+        "workbookId":"Workbook ID"
     },
     "french": {
         "voiladocPID": "VoiladocPID",
@@ -34,5 +36,7 @@ export const claims = {
         "ClaimsInProgress": "Réclamations en cours",
         "ClaimsProcessed": "Réclamations traitées",
         "ClaimsRejected": "Réclamations rejetées",
+        "folderId":"ID de dossier",
+        "workbookId":"ID du classeur"
     }
 }

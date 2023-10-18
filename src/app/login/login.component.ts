@@ -16,6 +16,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
   username: any;
   password: any;
   result: any;
+  showPopup:any;
+  messageID:any;
+  typeofPopUp:any;
+  typeOfPopup:any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
@@ -31,14 +35,25 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   async login() {
     debugger;
-    this.loaderService.showSpinner = true;
+ //   this.loaderService.showSpinner = true;
+    if (this.pin == null ||this.pin== undefined) {
+      this.typeOfPopup = 2;
+      this.messageID = 2;
+      this.showPopup = true;
+
+    }
+    if (this.username == null || this.password == undefined) {
+      this.typeOfPopup = 2;
+      this.messageID = 3;
+      this.showPopup = true;
+    }
     if (this.username && this.password && this.pin) {
 
       const res = await this.apiService.commonGetCall(`EBM/GetInsuranceCompanyLogin?UserName=${this.username}&Password=${this.password}&LanguageID=${this.languageID}&Pinno=${this.pin}`);
       this.result = res;
       debugger;
       console.log('res' + this.result)
-      if (res.status === 200) {
+      if (this.result.data.length != '0') {
         this.loaderService.isLogin = 'yes';
         sessionStorage.setItem("isLogin", "yes");
         sessionStorage.setItem('temp', '1');
@@ -51,6 +66,14 @@ export class LoginComponent implements OnInit, AfterViewInit {
         sessionStorage.setItem('downloadMasterID', this.result.data[0].downloadMasterID)
         this.router.navigate(['/Dashboard']);
 
+      }
+      else{
+        this.typeOfPopup = 2;
+        this.messageID = 4;
+        this.showPopup = true;
+        this.pin = "";
+        this.password = ""; 
+        this.username ="";
       }
     }
   }

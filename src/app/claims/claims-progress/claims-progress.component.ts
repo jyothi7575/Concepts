@@ -19,18 +19,18 @@ export class ClaimsProgressComponent {
     this.labels = this.languageID == '1' ? claims.english : claims.french;
   }
   data = [
-    {
-      "voiladocPID": "123",
-      "name": "EBM",
-      "phoneNumber": "98754321",
-      "emailID": "ebi@gmail.com",
-      'insuranceCompany': "EBI",
-      "policyNumber": "123",
-      'subscriptionNumber': "321",
-      "claimAmount": "20000",
-      "status": "Pending",
-      "attachments": "https://maroc.voiladoc.org//VoiladocTestAPI/PatientDocuments/21278/SoapNotes/20230710120845images.jpg"
-    }
+    // {
+    //   "voiladocPID": "123",
+    //   "name": "EBM",
+    //   "phoneNumber": "98754321",
+    //   "emailID": "ebi@gmail.com",
+    //   'insuranceCompany': "EBI",
+    //   "policyNumber": "123",
+    //   'subscriptionNumber': "321",
+    //   "claimAmount": "20000",
+    //   "status": "Pending",
+    //   "attachments": "https://maroc.voiladoc.org//VoiladocTestAPI/PatientDocuments/21278/SoapNotes/20230710120845images.jpg"
+    // }
   ]
   showcet(data:any){
     window.open(data);

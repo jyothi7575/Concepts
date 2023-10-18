@@ -5,6 +5,7 @@ import { ErrorComponent } from './error/error.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PatientRegistrationComponent } from './patient-registration/patient-registration.component';
 import { PatientsComponent } from './patients/patients.component';
+import { ToastpopupComponent } from './Popups/toastpopup/toastpopup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
     path: 'Claims',
     loadChildren: () => import('../app/claims/claims.module').then(m => m.ClaimsModule)
   },
+  { path: 'Toastpopup', component: ToastpopupComponent },
   { path: '**', component: ErrorComponent }
 ];
 
