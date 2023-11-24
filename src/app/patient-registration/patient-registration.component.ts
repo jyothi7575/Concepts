@@ -35,6 +35,7 @@ export class PatientRegistrationComponent {
       policyExpiryDate: new FormControl(''),
       insuranceCompanyName: new FormControl(''),
       identityNumber: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      InsuranceID:new FormControl(sessionStorage.getItem('InsuranceID'), )
     });
   }
   ngOnInit() {
@@ -56,6 +57,7 @@ export class PatientRegistrationComponent {
       policyExpiryDate: new FormControl(''),
       insuranceCompanyName: new FormControl(''),
       identityNumber: new FormControl('', Validators.required),
+      InsuranceID:new FormControl(sessionStorage.getItem('InsuranceID'), )///api pending 
     });
   }
 

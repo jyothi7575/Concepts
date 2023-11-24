@@ -63,7 +63,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
         sessionStorage.setItem('pincode', this.result.data[0].pincode);
         sessionStorage.setItem('Password', this.password);
         sessionStorage.setItem('temp', '1');
-        sessionStorage.setItem('downloadMasterID', this.result.data[0].downloadMasterID)
+        sessionStorage.setItem('downloadMasterID', this.result.data[0].downloadMasterID),
+        sessionStorage.setItem('InsuranceID', this.result.data[0].insuranceID)
         this.router.navigate(['/Dashboard']);
 
       }
