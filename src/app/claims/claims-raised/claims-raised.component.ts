@@ -35,57 +35,57 @@ export class ClaimsRaisedComponent {
         "classeurId": this.data[i].workbookID,//workbooKIds
         "dossierId": this.data[i].folderID//folderID
       }
-      const res1 = await this.apiService.commonPostCall1(
-        'RequestClaim',entity
-      );
-      const res = await this.apiService.commonPostCall1(
-        'IsClaimAvailable',entity
-      );
+      // const res1 = await this.apiService.commonPostCall1(
+      //   'RequestClaim',entity
+      // );
+      // const res = await this.apiService.commonPostCall1(
+      //   'IsClaimAvailable',entity
+      // );
      
-      let entity1={
-        'patientID': this.data[i].patientID,
-        "workbookID": this.data[i].workbookID,//workbooKIds
-        "folderID": this.data[i].folderID,//folderID
-        "emailID":this.data[i].emailID,
-        "mobileNumber":this.data[i].mobileNumber,
-        "policyNumber":this.data[i].policyNumber,
-        "amount":res1.data.amountRefund,
-        "status":res.data?'Claim':'Processing'
-      }
-            console.log("print",entity1)
-            this.data1.push(entity1)
-            console.log("printdata",  this.data1)
+      // let entity1={
+      //   'patientID': this.data[i].patientID,
+      //   "workbookID": this.data[i].workbookID,//workbooKIds
+      //   "folderID": this.data[i].folderID,//folderID
+      //   "emailID":this.data[i].emailID,
+      //   "mobileNumber":this.data[i].mobileNumber,
+      //   "policyNumber":this.data[i].policyNumber,
+      //   "amount":res1.data.amountRefund,
+      //   "status":res.data?'Claim':'Processing'
+      // }
+            // console.log("print",entity1)
+            // this.data1.push(entity1)
+            // console.log("printdata",  this.data1)
     }
   }
 
-  async islciams(id:any, folderID:any,workbookID:any){
-   var d= {
-      "voilaDocId": id,
-    "classeurId": folderID,
-    "dossierId": workbookID
-    }
-    const res = await this.apiService.commonPostCall1(
-      'IsClaimAvailable',d
-    );
+  // async islciams(id:any, folderID:any,workbookID:any){
+  //  var d= {
+  //     "voilaDocId": id,
+  //   "classeurId": folderID,
+  //   "dossierId": workbookID
+  //   }
+  //   const res = await this.apiService.commonPostCall1(
+  //     'IsClaimAvailable',d
+  //   );
    
-    this.data=res.data
-  }
+  //   this.data=res.data
+  // }
  
 
-  async reqClaim(){
-    debugger;
-    var d= {
-       "voilaDocId": "21484",
-     "classeurId": 294046,
-     "dossierId": 305624
-     }
-     const res1 = await this.apiService.commonPostCall1(
-       'RequestClaim',d
-     );
-     console.log("data"+res1)
-     this.data1=res1.data
-     console.log("data"+this.data1.amountRefund)
-   }
+  // async reqClaim(){
+  //   debugger;
+  //   var d= {
+  //      "voilaDocId": "21484",
+  //    "classeurId": 294046,
+  //    "dossierId": 305624
+  //    }
+  //    const res1 = await this.apiService.commonPostCall1(
+  //      'RequestClaim',d
+  //    );
+  //    console.log("data"+res1)
+  //    this.data1=res1.data
+  //    console.log("data"+this.data1.amountRefund)
+  //  }
   
   showcet(data:any){
     window.open(data);

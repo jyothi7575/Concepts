@@ -18,14 +18,14 @@
                 <th>{{labels.phoneNo}}</th>
                 <th>{{labels.emailID}}</th>
                 <th>{{labels.claimAmount}}</th>
-                <th>{{labels.insuranceCompany}}</th>
+                <!-- <th>{{labels.insuranceCompany}}</th> -->
                 <th>{{labels.policyNumber}}</th>
                 <th>{{labels.subscripNo}}</th>            
                 <th>{{labels.status}}</th>
-                
-
+                <th>{{'Details'}}</th>
+                <th>{{"Appointment ID"}}</th>
             </tr>
-            <tr *ngFor="let details of data1">
+            <tr *ngFor="let details of data">
                 <td>{{details.folderID}}</td>
                 <td>{{details.workbookID}}</td>
                 <td>{{details.patientID}}</td>
@@ -33,11 +33,12 @@
                 <td>{{details.mobileNumber}}</td>
                 <td>{{details.emailID}}</td>
                 <td>{{details.amount}}</td>
-                <td>{{details.insuranceCompany}}</td>
-                <td>{{details.policyNumber}}</td>
-                <td>{{details.subscriptionNumber}}</td>           
+                <!-- <td>{{details.insuranceCompany}}</td> -->
+                <td>{{details.policyNo}}</td>
+                <td>{{details.subscriptionNo}}</td>           
                 <td>{{details.status}}</td>
-             
+                <td>{{details.includes}}</td>
+                <td>{{details.appointmentID}}</td>
                 <!-- <td>
                     <img src="assets/images/ViewDetails.png" class="editdelete"
                         (click)="showcet(details.attachments)" />
