@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { claims } from '../../../assets/jsons/claims';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
@@ -11,13 +11,24 @@ import { Router } from '@angular/router';
 export class ClaimsProcessedComponent {
   labels: any;
   languageID: any;
-
+  sum1:any;
+@Input() parentDef:any | undefined;
+@Output() senddata=new EventEmitter<Number>();
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
+    debugger
     this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? claims.english : claims.french;
+    this.senddata.emit(345);
   }
+   sumArray() {
+    // Use reduce to add all elements of the array together
+    const sum = this.parentDef.reduce((total:any, current:any) => total + current, 0);
+    this.sum1=sum;
+    //this.senddata.emit(this.sum1);
+    return sum;
+}
   data = [
     {
       "voiladocPID": "123",

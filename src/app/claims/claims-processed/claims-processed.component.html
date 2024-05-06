@@ -1,7 +1,8 @@
 <div class="headercard headerspace">
     <div class="row">
         <div class="col-lg-11">
-            <h5 class="headings">{{labels.ClaimsProcessed}}</h5>
+            <h5 class="headings">{{parentDef}}</h5>
+            <button (click)="sumArray()">adddd</button><h5 class="headings">{{sum1}}</h5>
         </div>
 
     </div>
@@ -9,7 +10,7 @@
 <div class="row">
     <div class="col-lg-12">
         <table class="table table-hover">
-            <tr>
+            <!-- <tr>
                 <th>{{labels.voiladocPID}}</th>
                 <th>{{labels.name}}</th>
                 <th>{{labels.phoneNo}}</th>
@@ -20,7 +21,7 @@
                 <th>{{labels.claimAmount}}</th>
                 <th>{{labels.status}}</th>
                 <th>{{labels.attachments}}</th>
-            </tr>
+            </tr> -->
             <!-- <tr *ngFor="let details of data">
 
                 <td>{{details.voiladocPID}}</td>

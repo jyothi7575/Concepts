@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-lg-11">
             <h5 class="headings">{{labels.ClaimsInProgress}}</h5>
+    <app-claims-processed [parentDef]="datas" (senddata)="emitdata($event)"></app-claims-processed>
         </div>
     </div>
 </div>

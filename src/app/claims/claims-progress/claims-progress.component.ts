@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { claims } from '../../../assets/jsons/claims';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
@@ -11,12 +11,16 @@ import { Router } from '@angular/router';
 export class ClaimsProgressComponent {
   labels: any;
   languageID: any;
-
+  datas=[1,2,3]
+  parentDef="ParentName";
+  @Input() senddata:any | undefined;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
+    debugger
     this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? claims.english : claims.french;
+    //window.alert(this.senddata);
   }
   data = [
     // {
@@ -34,5 +38,9 @@ export class ClaimsProgressComponent {
   ]
   showcet(data:any){
     window.open(data);
+  }
+  emitdata(event:any){
+    
+    window.alert(event);
   }
 }
