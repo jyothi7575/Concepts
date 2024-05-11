@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'Claims',
     loadChildren: () => import('../app/claims/claims.module').then(m => m.ClaimsModule)
   },
+  {
+    path: 'Integration',
+    loadChildren: () => import('../app/Integrations/integration.module').then(m => m.IntegrationModule)
+  },
   { path: 'Toastpopup', component: ToastpopupComponent },
   { path: '**', component: ErrorComponent }
 ];

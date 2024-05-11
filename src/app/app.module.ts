@@ -15,7 +15,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgToastModule } from 'ng-angular-popup';
 import { ToastpopupComponent } from './Popups/toastpopup/toastpopup.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { DirectivesComponent } from './Integrations/directives/directives.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +26,8 @@ import { DirectivesComponent } from './Integrations/directives/directives.compon
     DashboardComponent,
     PatientsComponent,
     PatientRegistrationComponent,
-    ToastpopupComponent,
-    DirectivesComponent
+    ToastpopupComponent
+    
   ],
   imports: [
     NgToastModule,
