@@ -10,34 +10,20 @@
 <div class="row">
     <div class="col-lg-12">
         <table class="table table-hover">
-            <!-- <tr>
-                <th>{{labels.voiladocPID}}</th>
+            <tr>
+               
                 <th>{{labels.name}}</th>
                 <th>{{labels.phoneNo}}</th>
                 <th>{{labels.emailID}}</th>
-                <th>{{labels.insuranceCompany}}</th>
-                <th>{{labels.policyNumber}}</th>
-                <th>{{labels.subscripNo}}</th>
-                <th>{{labels.claimAmount}}</th>
-                <th>{{labels.status}}</th>
-                <th>{{labels.attachments}}</th>
-            </tr> -->
-            <!-- <tr *ngFor="let details of data">
-
-                <td>{{details.voiladocPID}}</td>
+             
+            </tr>
+            <tr *ngFor="let details of respomse">
+   
                 <td>{{details.name}}</td>
-                <td>{{details.phoneNumber}}</td>
-                <td>{{details.emailID}}</td>
-                <td>{{details.insuranceCompany}}</td>
-                <td>{{details.policyNumber}}</td>
-                <td>{{details.subscriptionNumber}}</td>
-                <td>{{details.claimAmount}}</td>
-                <td>{{details.status}}</td>
-                <td>
-                    <img src="assets/images/ViewDetails.png" class="editdelete"
-                        (click)="showcet(details.attachments)" />
-                </td>
-            </tr> -->
+                <td>{{details.phone}}</td>
+                <td>{{details.email}}</td>
+            
+            </tr> 
         </table>
     </div>
 </div>

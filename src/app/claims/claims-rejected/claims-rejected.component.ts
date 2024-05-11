@@ -17,6 +17,7 @@ export class ClaimsRejectedComponent {
   ngOnInit() {
     this.languageID = this.apiService.languageID;
     this.labels = this.languageID == '1' ? claims.english : claims.french;
+    //this.revert('Hello');
   }
   data = [
     {
@@ -36,4 +37,9 @@ export class ClaimsRejectedComponent {
   showcet(data:any){
     window.open(data);
   }
+
 }
+
+
+
+

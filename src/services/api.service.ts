@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import axios from 'axios';
+import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +13,11 @@ export class ApiService {
   controller1: string = sessionStorage.getItem('controller1') || "Claims"; 
 
   languageID: string = sessionStorage.getItem('languageID') || "1";
+  private data: string[] = ['Apple', 'Banana', 'Orange'];
 
+  getData(): Observable<string[]> {
+    return of(this.data); // Simulating an asynchronous operation
+  }
   constructor() {
     this.hostURL = environment.host;
     this.hostURL1="https://test.epega-sante.com/v1/VoilaDoc/"
@@ -27,8 +32,8 @@ export class ApiService {
   }
 
   public async commonGetCall(endPoint: string) {
-    return await axios.get(this.hostURL + endPoint);
-  }
+    return await axios.get(this.hostURL + endPoint); 
+   }
 
   public async commonGetMasters(endPoint: string) {
     return await axios.get(this.hostURL + endPoint);

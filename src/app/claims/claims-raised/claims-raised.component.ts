@@ -3,6 +3,7 @@ import { claims } from '../../../assets/jsons/claims';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
 import { Router } from '@angular/router';
+import { map } from 'rxjs';
 @Component({
   selector: 'app-claims-raised',
   templateUrl: './claims-raised.component.html',
@@ -13,6 +14,7 @@ export class ClaimsRaisedComponent {
   languageID: any;
   data:any;
   data1:any=[];
+  userName: any;
   constructor(public apiService: ApiService, public loaderService: LoaderService, public router: Router) { }
 
   ngOnInit() {
@@ -28,7 +30,11 @@ export class ClaimsRaisedComponent {
     const res = await this.apiService.commonGetCall(
       'EBM/GetInsuranceClaimsDetails'
     );
-    this.data=res.data
+    this.data=res.data.filter((x:{amount:any})=>x.amount==1000);
+    this.userName= this.data.map((x:{amount:any;})=>x.amount==1000);
+    console.log("filter filter",this.data);  
+   console.log("Map filter",this.userName);  
+   // this.userName= this.data.pipe(map(this.data=>this.data.patientName))
     for(let i=0;i<=this.data.length; i++){
      var entity={
        'voilaDocId': this.data[i].patientID,

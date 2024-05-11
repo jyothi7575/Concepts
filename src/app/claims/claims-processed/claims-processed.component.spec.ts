@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClaimsProcessedComponent } from './claims-processed.component';
+import { ClaimsProcessedComponent } from './ClaimsProcessedComponent';
 
 describe('ClaimsProcessedComponent', () => {
   let component: ClaimsProcessedComponent;

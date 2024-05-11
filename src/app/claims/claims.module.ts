@@ -5,13 +5,15 @@ import { ClaimsProgressComponent } from './claims-progress/claims-progress.compo
 import { ClaimsRejectedComponent } from './claims-rejected/claims-rejected.component';
 import { ClaimsProcessedComponent } from './claims-processed/claims-processed.component';
 import { ClaimsRoutingModule } from './claims-routing.module';
+import { ProgramsRxjsComponent } from './programs-rxjs/programs-rxjs.component';
 
 @NgModule({
   declarations: [
     ClaimsRaisedComponent,
     ClaimsProgressComponent,
     ClaimsRejectedComponent,
-    ClaimsProcessedComponent
+    ClaimsProcessedComponent,
+    ProgramsRxjsComponent
   ],
   imports: [
     CommonModule,
