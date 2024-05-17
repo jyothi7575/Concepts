@@ -32,7 +32,7 @@ export class ApiService {
   }
 
   public async commonGetCall(endPoint: string) {
-    return await axios.get(this.hostURL + endPoint); 
+    return await axios.get( endPoint); 
    }
 
   public async commonGetMasters(endPoint: string) {

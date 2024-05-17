@@ -12,14 +12,14 @@
         <table class="table table-hover">
             <tr>
                
-                <th>{{labels.name}}</th>
+                <th>{{labels.name }}</th>
                 <th>{{labels.phoneNo}}</th>
                 <th>{{labels.emailID}}</th>
              
             </tr>
             <tr *ngFor="let details of respomse">
    
-                <td>{{details.name}}</td>
+                <td>{{details.name | samplePipe : "kumar" : "gudelli" }}</td>
                 <td>{{details.phone}}</td>
                 <td>{{details.email}}</td>
             

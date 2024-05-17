@@ -1,12 +1,17 @@
-import { Component, EventEmitter, Input, Output ,inject } from '@angular/core';
+import { Component, EventEmitter, Input, Output ,Pipe,inject } from '@angular/core';
 import { claims } from '../../../assets/jsons/claims';
 import { ApiService } from 'src/services/api.service';
 import { LoaderService } from 'src/services/loader.service';
 import { Router } from '@angular/router';
+import { SamplePipePipe } from 'src/app/pipes/sample-pipe.pipe';
+
 @Component({
   selector: 'app-claims-processed',
   templateUrl: './claims-processed.component.html',
-  styleUrls: ['./claims-processed.component.css']
+  styleUrls: ['./claims-processed.component.css'],
+  providers: [
+    SamplePipePipe
+]
 })
 export class ClaimsProcessedComponent {
   labels: any;

@@ -9,7 +9,7 @@ import { ToastpopupComponent } from './Popups/toastpopup/toastpopup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full' },
-  { path: 'Login', component: LoginComponent, pathMatch: 'full' },
+   { path: 'Login', component: LoginComponent, pathMatch: 'full' },
   { path: 'Dashboard', component: DashboardComponent, pathMatch: 'full' },
   { path: 'Patients', component: PatientsComponent, pathMatch: 'full' },
   { path: 'PatientRegistartion', component: PatientRegistrationComponent, pathMatch: 'full' },
@@ -22,6 +22,7 @@ const routes: Routes = [
     loadChildren: () => import('../app/Integrations/integration.module').then(m => m.IntegrationModule)
   },
   { path: 'Toastpopup', component: ToastpopupComponent },
+  
   { path: '**', component: ErrorComponent }
 ];
 

@@ -6,6 +6,7 @@ import { ClaimsRejectedComponent } from './claims-rejected/claims-rejected.compo
 import { ClaimsProcessedComponent } from './claims-processed/claims-processed.component';
 import { ClaimsRoutingModule } from './claims-routing.module';
 import { ProgramsRxjsComponent } from './programs-rxjs/programs-rxjs.component';
+import { SamplePipePipe } from '../pipes/sample-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProgramsRxjsComponent } from './programs-rxjs/programs-rxjs.component';
     ClaimsProgressComponent,
     ClaimsRejectedComponent,
     ClaimsProcessedComponent,
-    ProgramsRxjsComponent
+    ProgramsRxjsComponent,
+    SamplePipePipe
   ],
   imports: [
     CommonModule,
